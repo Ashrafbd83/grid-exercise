@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive exercise2 using by grid</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: serif;
+        font-size: 30px;
+        width: 100%;
+        height: 100vh;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 2vh;
+        border: 2px solid blue;
+        justify-items:center;
+      }
+      @media (max-width:600px)
+      {
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            gap:4vh;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div>Home</div>
+      <div>About</div>
+      <div>Cotact</div>
+      <div>Blog</div>
+      <div>Activity</div>
+    </div>
+  </body>
+</html>
